@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Home Page</title>
+
+    <!-- about page font for footer -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="main-con">
+
+    <!-------------NAVIGATION BAR ----------- -->
+
+    <div class="container">
+        <div class="navigation">
+            <div class="left">
+                <!-- Nav Bar -->
+                <!-- a-tag, how you define a link in html
+                    herf is where link points too -->
+                <div class="nav-url-wrapper active-nav-link">    
+                    <a href="index.html">Home</a> 
+                </div>
+                
+                <div class="nav-url-wrapper"> 
+                    <a href="contact.html">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="text-name">
+                    <div>KERYN ROOS</div> <!--a div will give a line break -->
+                </div>
+            </div>
+        </div>
+
+    <!-- ---------- END ------------- -->
+
+        <div class="content-wrapper">
+
+            <div class="portfolio-items-wrapper">
+            
+                <!-- Portfolio 1 -->
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-image-bkrnd" style="background-image:url(images/nathan-anderson-ohx4v80mJm8-unsplash.jpg)"></div>
+               
+                    <div class="image-text-wrapper">
+                        <div class="icon-wrapper">
+                            <div class "main" id="about">
+                            <a href="about.html">
+                                    <img src="images/icons/speech-bubble.png">
+                            </a>
+                            </div>
+                        </div>
+
+                        <div class="subtitle">
+                            About Me
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio 2 -->
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-image-bkrnd" style="background-image:url(images/alessandro-sacchi-NUFnfYd09iI-unsplash.jpg)"></div>
+               
+                    <div class="image-text-wrapper">
+                        <div class="icon-wrapper">
+                            <div class "main" id="hobbies">
+                                <a href="interests.html">
+                                    <img src="images/icons/medal.png">
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="subtitle">
+                            Hobbies
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio 3 -->
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-image-bkrnd" style="background-image:url(images/md-duran-1VqHRwxcCCw-unsplash.jpg)"></div>
+               
+                    <div class="image-text-wrapper">
+                        <div class="icon-wrapper">
+                            <div class "main" id="education">
+                                <a href="education.html">
+                                    <img src="images/icons/diploma.png">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="subtitle">
+                            Education
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio 4 -->
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-image-bkrnd" style="background-image:url(images/wes-hicks-jaRUkG_4xDw-unsplash.jpg)"></div>
+               
+                    <div class="image-text-wrapper">
+                        <div class="icon-wrapper">
+                            <a href="skills.html">
+                                <img src="images/icons/puzzle.png">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Skills
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio 5 -->
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-image-bkrnd" style="background-image:url(images/designecologist-gh1IgGFnhSk-unsplash.jpg)"></div>
+               
+                    <div class="image-text-wrapper">
+                        <div class="icon-wrapper">
+                            <a href="portfolio.html">
+                                <img src="images/icons/suitcase.png">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Portfolio
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio 6 -->
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-image-bkrnd" style="background-image:url(images/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg)"></div>
+               
+                    <div class="image-text-wrapper">
+                        <div class="icon-wrapper">
+                            <a href="APIs.html">
+                                <img src="images/icons/api.png"/>
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            APIs
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<!-- FOOTER -->
+    
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-bottom">
+            <h1> &copy; This CV Site was designed and developed by me! | Keryn Roos </h1>
+        </div>
+        
+    </div>
+</footer>
+
+<!-- FOOTER -->
+
+</div>
+
+</body>
+
+
+
+<!-- JS code added at the bottom, this is because we dont want it to run before the page has loaded -->
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList;
+            portfolioItem.childNodes[1].classList.add('image-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList;
+            portfolioItem.childNodes[1].classList.remove('image-darken');
+        })
+    })
+</script>
+
+</html>

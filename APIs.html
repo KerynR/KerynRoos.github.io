@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>APIs</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">   
+        
+
+        <!-- YOUTUBE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+         <!-- footer font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+    </head>
+
+<body>
+
+<div class="main-con">
+
+    <div class="container">
+        <div class="navigation">
+            <div class="left">
+                <!-- Nav Bar -->
+                <!-- a-tag, how you define a link in html
+                    herf is where link points too -->
+                <div class="nav-url-wrapper active-nav-link">    
+                    <a href="index.html">Home</a> 
+                </div>
+                
+                <div class="nav-url-wrapper"> 
+                    <a href="contact.html">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="text-name">
+                    <div>KERYN ROOS</div> <!--a div will give a line break -->
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+    <div class="headingAPI">
+        <h1>APIs</h1>
+    </div>
+
+    <div class="api-wrapper">
+
+        <div class="row-api">
+            <div class="column-api">
+                
+                <h2>
+                    YOUTUBE
+                </h2>
+                
+                <!-- partial:index.partial.html -->
+            <div class="youtubeAPI">
+                <div class="container-api2">
+                    <header>
+                        <img src="https://github.com/Middi/youtube-api/blob/master/images/logo.png?raw=true" alt="" class="logo">
+                    </header>
+
+                    <section id="video">
+
+                    </section>
+
+                    <main>
+
+                    </main>
+
+                </div>
+            </div>
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+                
+            </div>
+    
+            <div class="column-api">
+                <h2>TWITTER</h2>
+
+                <div class="column-twitter-api">
+        
+                    <div class="api1-container">
+                        <a class="twitter-timeline" data-lang="en" data-width="600" data-height="1060" data-theme="dark" href="https://twitter.com/hakimel?ref_src=twsrc%5Etfw">Tweets by hakimel</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                
+                </div>
+
+            </div>
+    
+            <div class="column-api">
+                <h2>GITHUB</h2>
+
+                <div class="container-api3">
+
+                    <button id = 'btnRepos'>Repositories</button>
+                    <button id = 'btnIssues'>Issues</button>
+
+                    <div id="divResult">
+
+                    </div>
+                    
+                    <script>
+
+                        const btnRepos = document.getElementById("btnRepos")
+                        const btnIssues = document.getElementById("btnIssues")
+
+                        const divResult = document.getElementById("divResult")
+                        btnRepos.addEventListener("click", getRepos)
+                        btnIssues.addEventListener("click", getIssues)
+
+                        async function getRepos(){
+                            clear();
+                            const url = "http://api.github.com/search/repositories?q=stars:>90000"
+                            const response = await fetch(url)
+                            const result = await response.json()
+
+                            result.items.forEach(k=>{
+
+                                const anchor = document.createElement("a")
+                                anchor.href = k.html_url;
+                                anchor.textContent = k.full_name;
+                                divResult.appendChild(anchor)
+                                divResult.appendChild(document.createElement("br"))
+                            })
+
+                        }
+
+                        async function getIssues(){
+                            clear();
+                            const url = "http://api.github.com/search/issues?q=author:sky020 repo:freeCodeCamp/freeCodeCamp type:issue"
+                            const response = await fetch(url)
+                            const result = await response.json()
+
+                            result.items.forEach(k=>{
+
+                                const anchor = document.createElement("a")
+                                anchor.href = k.html_url;
+                                anchor.textContent = k.title;
+                                divResult.appendChild(anchor)
+                                divResult.appendChild(document.createElement("br"))
+                            })
+
+                        }
+
+                        function clear(){
+                             while(divResult.firstChild)
+                                divResult.removeChild(divResult.firstChild)
+                             }
+
+                    </script>
+                    
+                </div> <!-- container 3 -->
+
+            </div>
+    
+        </div>
+    
+    </div>
+
+     <!-- FOOTER -->
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <h1> &copy; This CV Site was designed and developed by me! | Keryn Roos </h1>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- FOOTER -->
+
+</div>
+    
+</body>
+
+
+
+<!-- JS code added at the bottom, this is because we dont want it to run before the page has loaded -->
+
+</html>
+
+

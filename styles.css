@@ -1,0 +1,1025 @@
+/* ----------------------------- MASTER STYLES ------------------------------ */
+
+html, 
+body{
+    height: 100%;
+    font-family: 'Baloo Tammudu 2', cursive;
+    margin: 0px; /* Overwrite default margin of 8px */
+}
+
+/*Using CSS grid*/
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr; /*fr = fractional unit (should take up from end to end*/
+}
+
+/* ----------------------------- START OF NAV BAR (using Flexbox - best for small layouts) ---------------------------  */
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;   
+}
+
+.left{
+    display: flex;
+
+}
+
+.navigation > .left > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;    
+}
+
+.nav-url-wrapper{
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-url-wrapper a {
+    color: #d64161;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+/* hover is a pseudo state */
+.nav-url-wrapper:hover{
+    border-bottom: 1px solid #6b5b95;
+}
+
+.nav-url-wrapper a:hover{
+    color: #6b5b95;
+}
+
+.active-nav-link{
+    border-bottom: 1px solid #6b5b95;
+}
+
+.active-nav-link a {
+    color: #6b5b95 !important; /*this is to override the default color*/
+}
+
+.text-name {
+    color:  #d64161;
+    font-size: 20px;
+}
+
+/* ----------------------------- END OF NAV BAR ---------------------------  */
+
+/*-----------------------------HOME Styles----------------------------  */
+
+.portfolio-items-wrapper{
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper{
+    position: relative; /*relative is required if you want to have a absolute position nested inside it*/
+}
+
+/* Style cover and image related items */
+.portfolio-image-bkrnd{
+    height: 350px;
+    width: 100%; /*Adjust auto*/
+    background-size: cover; /*crop images of different sizes so that they all fit correctly*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* portfolio text */
+.image-text-wrapper{
+    position: absolute; /*forcing it to be somewhere its would usually go*/
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* style icons */
+.icon-wrapper img {
+    width: 100%;
+    margin-bottom: 20px;   
+  }
+
+.image-text-wrapper .subtitle{
+    transition: 1s;
+    font-weight: 600;
+    color: transparent
+}
+
+.image-text-wrapper:hover .subtitle{
+    font-weight: 600;
+    font-size: 30px;
+    color: #d64161;    
+}
+
+/*JavaScript will dynamically add and remove the class when the user hovers over it*/
+.image-darken{
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* ====================================================== */
+/* ----------------------- FOOTER ----------------------- */
+/* ====================================================== */
+
+*{
+  box-sizing: border-box;
+}
+
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  position: relative;
+}
+
+.main-con{
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #26242C;
+  color: white;
+  /* height: 60px; */
+}
+
+footer h1{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+/* ==================================================================== */
+/* ------------------------- CONTACT ME PAGE -------------------------- */
+/* ==================================================================== */
+
+.container-contact{
+  padding-top: 70px;
+}
+
+.left-col{
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.social-media-contact{
+  float: right;
+  width: 50%;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 40px;
+}
+
+.left-col h1{
+  color: white;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 40px;
+}
+
+.left-col h3{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-bottom: 30px;
+}
+
+.left-col h2{
+  color: #D64161;
+  font-family: 'Source Sans Pro', sans-serif;  
+}
+
+.linkedinIcon{
+  padding-left: 200px;
+  padding-bottom: 10px;
+}
+.twitterIcon{
+  padding-left: 200px;
+  padding-bottom: 10px;
+}
+.githubIcon{
+  padding-left: 200px;
+  padding-bottom: 10px;
+}
+.facebookIcon{
+  padding-left: 200px;
+  padding-bottom: 10px;
+}
+
+.linkedinIcon:hover{
+  opacity: 0.7;
+}
+
+.twitterIcon:hover{
+  opacity: 0.7;
+}
+
+.githubIcon:hover{
+  opacity: 0.7;
+}
+
+.facebookIcon:hover{
+  opacity: 0.7;
+}
+
+  html{
+      scroll-behavior: smooth;
+  } 
+
+/* ======================================================== */
+/*                 START OF ABOUT PAGE                      */
+/* ======================================================== */
+
+
+.about-container p{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.about-container *{
+  box-sizing: border-box;
+}
+
+.about-container body {
+  margin: 0;
+}
+
+.about-container{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Style the header */
+.about-header {
+  color: #feb236;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.column-about {
+  float: left;
+  width: 50%;
+  
+}
+
+/* Clear floats after the columns */
+.row-about:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:500px) {
+  .column-about {
+    width: 100%;
+  }
+}
+
+/* ---------------- END OF ABOUT ME PAGE ------------------ */
+
+/* ========================================================= */
+ /*                    HOBBIES AND INTERESTS                   */
+ /* ========================================================= */
+
+.grid-con{
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-between;
+}
+
+.column-horse{
+  display: flex;
+  float: left;
+  width: 33.33%;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.column-hike{
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 33.33%;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.column-travel{
+  float: left;
+  width: 33.33%;
+  color: white;
+  text-align: center;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+ #flip-pic-container{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   align-items: center;
+   align-content: center;
+ }
+
+ #flip-pic-container{
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+
+#flip-pic-container{
+  perspective: 1000;
+}
+
+#flip-card{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+#flip-pic-container:hover #flip-card{
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #6b5b95;
+}
+
+.face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face.back{
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #353b48;
+}
+
+.hobby-headings h1{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 30px;
+  color: #6b5b95;
+  font-family: 'Playfair Display', serif;
+}
+
+.hobby-headings h2{
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+.hobby-headings p{
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* text behind card */
+.hobby-wrapper{
+  height: 400px;
+
+}
+.hobby-wrapper p{
+ font-size: 18px;
+ text-align: center;
+ color: white;
+ font-family: 'Source Sans Pro', sans-serif;
+ align-items: center;
+}
+
+.flip-pic-container{
+ padding-left: 50px;
+ position: center;
+ align-items: center;
+ padding-bottom: 10px;
+}
+
+/* ========================================================= */
+/*                  START OF EDUCATION PAGE                  */
+/* ========================================================= */
+
+  .headingEdu{
+    color: #d64161;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .timeline *{
+    box-sizing: border-box;
+  }
+
+  .timeline body{
+    background-color: #6b5b95;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #d64161;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  .containerT {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  .containerT::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #feb236;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+.leftT{
+  left:0;
+}
+
+.rightT{
+  left: 50%;
+}
+
+.leftT::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+  
+.rightT::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.rightT::after {
+  left: -16px;
+}
+
+.timeline-content{
+  padding: 1px 30px;
+  background-color: #6b5b95;
+  position: relative;
+  border-radius: 6px;
+}
+
+.timeline-content h1{
+  font-family: 'Playfair Display', serif;
+  color: white;
+  text-align: center;
+}
+
+.timeline-content h2{
+  font-family: 'Playfair Display', serif;
+  color: white;
+  text-align: center;
+}
+
+.timeline-content p{
+  font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.timeline-content a{
+  text-align: center;
+}
+
+.timeline-content a:link{
+  color: #feb236;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+
+    .containerT {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+
+    .containerT::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .leftT::after, .rightT::after {
+      left: 15px;
+    }
+
+    .rightT {
+      left: 0%;
+    }
+  }
+
+  /* ---------------- END OF EDUCATION PAGE ---------------- */
+
+
+  /* ==========================================  */
+  /*                 SKILLS BAR                 */
+  /* ==========================================  */
+
+  .skills *{
+    font-family: 'Source Sans Pro', sans-serif;
+    list-style: none;
+    padding: 0;
+  }
+
+  .skills h1{
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  body{
+    background: #0a020d;
+  }
+
+  .skills{
+    width: 500px;
+    margin: 60px auto;
+    color: #d64161;
+  }
+
+  .skills li{
+    margin: 30px 0;
+  }
+
+  .bar{
+    background: #353b48;
+    display: block;
+    height: 2px;
+    border: 1px solid rbga(0,0,0,0,3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #feb236;
+  }
+
+  .bar span{
+    height: 2px;
+    float: left;
+    background: #feb236;
+  }
+
+  .html{
+    width: 70%;
+    animation: html 2s;
+  }
+
+  .css{
+    width: 70%;
+    animation: css 2s;
+  }
+
+  .lightroom{
+    width: 85%;
+    animation: lightroom 2s;
+  }
+
+  .csharp{
+    width: 80%;
+    animation: csharp 2s;
+  }
+
+  .java{
+    width: 75%;
+    animation: java 2s;
+  }
+
+  .cplusplus{
+    width: 75%;
+    animation: cplusplus 2s;
+  }
+
+  .python{
+    width: 85%;
+    animation: python 2s;
+  }
+
+  .javascript{
+    width: 60%;
+    animation: javascript 2s;
+  }
+
+  .logodesign{
+    width: 85%;
+    animation: logodesign 2s;
+  }
+
+  .pm{
+    width: 90%;
+    animation: pm 2s;
+  }
+
+  @keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 70%;
+    }
+  }
+
+  @keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 70%;
+    }
+  }
+
+  @keyframes lightroom{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 85%;
+    }
+  }
+
+  @keyframes csharp{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 80%;
+    }
+  }
+
+  @keyframes java{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 75%;
+    }
+  }
+
+  @keyframes cplusplus{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 75%;
+    }
+  }
+
+  @keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 85%;
+    }
+  }
+
+  @keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 60%;
+    }
+  }
+  
+  @keyframes logodesign{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 85%;
+    }
+  }
+
+  @keyframes pm{
+    0%{
+        width: 0%;
+    }
+    100%{
+      width: 90%;
+    }
+  }
+
+/*======================================================================= */
+/*                            PORTFOLIO STYLES                            */
+/*======================================================================= */
+
+.portfolio-wrapper a:link{
+  color: #d64161;
+}
+
+.portfolio-wrapper a:visited{
+  color: #feb236;
+}
+
+.portfolio-container h2{
+  font-family: 'Playfair Display', serif;
+  color: #d64161;
+  font-size: 80px;
+  text-align: center;
+}
+
+.portfolio-wrapper h3{
+  font-family: 'Playfair Display', serif;
+  color: #d64161;
+  font-size: 30px;
+  text-align: center;
+}
+
+.portfolio-wrapper p{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+}
+
+.column-design-work{
+  float: left;
+  width: 33.33%;
+  color: white;
+  text-align: center;
+}
+
+.column-photography{
+  float: left;
+  width: 33.33%;
+  color: white;
+  text-align: center;
+}
+
+.column-uni-project{
+  float: left;
+  width: 33.33%;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px){
+  .column-design-work{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .column-photography{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .column-uni-project{
+    width: 100%;
+  }
+}
+
+/* ============================================ */
+/*                      API                     */
+/* ============================================ */
+
+.api-wrapper *{
+  box-sizing: border-box;
+}
+
+.api-wrapper body {
+  margin: 0;
+}
+
+/* Create three equal columns that floats next to each other */
+.column-api {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row-api:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column-api {
+    width: 100%;
+  }
+}
+
+.headingAPI h1{
+  color: #d64161;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+}
+
+.api-wrapper{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
+.youtubeAPI h4{
+  padding: 0;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.youtubeAPI p{
+  padding: 0;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 600;
+  color: grey;
+  font-size: 0.7rem;
+}
+
+.youtubeAPI body{
+  background-color: #0a020d;
+}
+
+.api1-container{
+  
+  padding-left: 30px;
+}
+
+.container-api2 {
+  width: 560px;
+  background-color: white;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.container-api3 {
+  width: 560px;
+  background-color: #B6A9AC;
+  margin: 0 auto;
+  align-items: center;
+  height: 1000px;
+  padding-top: 20px;
+  padding-left: 50px;
+
+}
+
+#btnRepos, #btnIssues{
+  background-color: #353b48;
+  color: white;
+  height: 60px;
+  width: 200px;
+  align-items: center;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.youtubeAPI header, section {
+  position: center;
+  text-align: center;
+  width: 560px;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+.youtubeAPI section {
+  top: 50px;
+}
+
+.logo {
+  width: 120px;
+  padding: 10px;
+}
+
+.youtubeAPI main {
+  padding: 37px 18px 10px;
+}
+
+article {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+article:hover {
+  border: 2px solid #d64161;
+}
+
+.thumb {
+  height: 70px;
+  border-radius: 4px;
+}
+
+.details {
+  padding: 8px 22px;
+}
+
+.column-api-twitter{
+  float: left;
+  width: 33.33%;
+}
+
+.column-api-youtube{
+  float: left;
+  width: 33.33%;
+  padding-bottom: 80px;
+}
+
+.column-api-3{
+  float: left;
+  width: 33.33%; 
+}
+
+@media screen and (max-width: 600px){
+  .column-api-twitter{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .column-api-youtube{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .column-api-3{
+    width: 100%;
+  }
+}
+
+/* YOUTUBE API END */
